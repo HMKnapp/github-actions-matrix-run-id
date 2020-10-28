@@ -1,0 +1,27 @@
+name: Get Matrix Job Run ID
+
+on: [push]
+
+jobs:
+  Runs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        example_run: [run_one, run_two]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v1
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Get own run URL
+        run: npm run test
+        env:
+          MATRIX_ID: ${{ matrix.example_run }}
+          # optional, for private repositories:
+          # GH_TOKEN: ${{ secrets.GH_TOKEN }}

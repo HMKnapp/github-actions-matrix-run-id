@@ -1,0 +1,24 @@
+{
+  "name": "github-actions-matrix-run-id",
+  "version": "1.0.0",
+  "description": "Fetches ID of the current CI run from the GitHub API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js --url"
+  },
+  "author": "Herbert Knapp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HMKnapp/github-actions-matrix-run-id"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "CI",
+    "Workflow"
+  ],
+  "license": "CC-BY-NC",
+  "dependencies": {
+    "@octokit/core": "^3.2.0"
+  }
+}
